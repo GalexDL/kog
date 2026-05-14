@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KoG Archive - Artbook</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Artbook Collection</h1>
+        
+        <div class="books-grid">
+            <!-- Book 1 -->
+            <div class="book-card" data-book="0">
+                <img src="images/KoGOA/KoGOA_Cover.webp" alt="KoGOA Artbook">
+                <div class="book-info">
+                    <h2>Knights of Glory Official Artworks</h2>
+                    <p class="author">Gakken</p>
+                </div>
+            </div>
+            <!-- Book 2 -->
+            <div class="book-card" data-book="1">
+                <img src="images/Book_2/KoGOA_Cover.webp" alt="Book 2">
+                <div class="book-info">
+                    <h2>???</h2>
+                    <p class="author">???</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="viewer-overlay hidden" id="viewerOverlay">
+            <div class="viewer-shell">
+                <div class="viewer-header">
+                    <div>
+                        <div class="viewer-title">KoGOA Artbook</div>
+                    </div>
+                </div>
+
+                <div class="viewer-actions">
+
+                    <div class="viewer-control-row">
+                        <div class="viewer-settings">
+                            <button type="button" class="viewer-btn viewer-settings-toggle" id="settingsToggle">
+                                <i class="bi bi-gear"></i>
+                            </button>
+                            <div class="viewer-settings-panel hidden" id="settingsPanel">
+                                <div class="viewer-settings-label">Magnification</div>
+
+                                <div class="viewer-zoom-controls">
+                                    <button type="button" class="viewer-btn" data-action="zoom-out">-</button>
+                                    <span id="zoomValue">100%</span>
+                                    <button type="button" class="viewer-btn" data-action="zoom-in">+</button>
+                                </div>
+                                <button type="button" class="viewer-btn viewer-reset" data-action="reset">Reset</button>
+                                <div class="viewer-settings-label">Resolution</div>
+                                <div class="viewer-res-switch">
+                                    <button type="button" class="viewer-res-btn active" data-res="lowres">LD</button>
+                                    <button type="button" class="viewer-res-btn" data-res="midres">SD</button>
+                                    <button type="button" class="viewer-res-btn" onclick="window.open('https://drive.google.com/drive/folders/19m80fwgmf3kQGGn_puCNLHjfTmtw-fDb?usp=drive_link', '_blank', 'noopener,noreferrer')">HQ</button>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        
+                        <button type="button" class="viewer-btn" data-action="prev-page">
+                            <i class="bi bi-caret-left-fill"></i>
+                        </button>
+                        <span class="viewer-page-label" id="viewerPageLabel">Page 1 / 152</span>
+                        <button type="button" class="viewer-btn" data-action="next-page">
+                            <i class="bi bi-caret-right-fill"></i>
+                        </button>
+                        <button type="button" class="viewer-close" id="viewerClose">
+                            <i class="bi bi-x-circle"></i>
+                        </button>
+                        
+                    </div>
+                </div>
+
+                <div class="viewer-image-frame" id="viewerFrame">
+                    <img id="viewerImage" src="images/KoGOA/lowres/1.webp" alt="KoGOA Artbook page" draggable="false">
+                </div>
+
+                <div class="viewer-page-controls">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

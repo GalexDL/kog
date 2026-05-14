@@ -1,0 +1,418 @@
+html {
+  font-size: min(0.85vw, 1.6vh);
+}
+/* Outline */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.OutlineBox {
+  width: 100.8em;
+  height: 53.664em;
+  background-color: #808080;
+  border-radius: 12px;
+  display: flex;
+}
+
+/* Homebar */
+.HomeBar {
+  width: 11.5em;
+  height: 52.8em;
+  background: linear-gradient(180deg, #fffcf6 0%, #f5efe2 100%);
+  margin: 7px 0px 7px 7px;
+  border-radius:12px;
+  box-shadow: inset -1px 0 0 rgba(139, 115, 85, 0.25);
+  display: flex;
+}
+.HomeBarBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 10px;
+  box-sizing: border-box;
+}
+.HomeBarBox > p {
+  margin: 0;
+  padding: 8px 10px 2px;
+  text-align: center;
+  font-family: RobotoConBold, sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  color: #60452a;
+  line-height: 1.2;
+}
+/* Homebar BTN */
+
+.HomeBarButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  min-height: 72px;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(145, 119, 87, 0.25);
+  border-radius: 14px;
+  padding: 8px 6px;
+  cursor: pointer;
+  margin: 0;
+  color: #5e4326;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+.HomeBarIcon {
+  display: block;
+  width: 4.75em;
+  height: 5.125em;
+  border-radius: 1em;
+  object-fit: fill;
+}
+.HomeBarBTN {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 8px;
+  width: 100%;
+  min-height: 52px;
+  background: rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(145, 119, 87, 0.25);
+  border-radius: 12px;
+  padding: 8px;
+  cursor: pointer;
+  margin: 0;
+  color: #5e4326;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.HomeBarButtons p,
+.HomeBarBTN p {
+  margin: 0;
+  font-family: RobotoConBold, sans-serif;
+  font-size: 1.0rem;
+  letter-spacing: 0.01em;
+  color: inherit;
+}
+
+.HomeBarButtons svg,
+.HomeBarBTN svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex: 0 0 auto;
+}
+
+.HomeBarButtons:hover,
+.HomeBarBTN:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.56);
+  box-shadow: 0 6px 16px rgba(50, 35, 14, 0.16);
+}
+
+/* Homebar Logo/Header */
+.HomeBarBrand {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.HomeBarBrand:hover {
+  background: transparent;
+  box-shadow: none;
+}
+.HomeBarBrand p {
+font-size: 1.8rem;
+}
+
+.HomeBarButtons:active,
+.HomeBarBTN:active {
+  transform: translateY(0);
+}
+
+.HomeBarButtons:focus-visible,
+.HomeBarBTN:focus-visible {
+  outline: 2px solid #ffb23d;
+  outline-offset: 2px;
+}
+
+.HomeBarBTN:last-child {
+  margin-top: auto;
+}
+
+@media (max-width: 1200px) {
+  .HomeBar {
+    width: 9.8em;
+  }
+
+  .HomeBarIcon {
+    width: 4.8em;
+    height: 4.8em;
+  }
+
+  .HomeBarButtons p,
+  .HomeBarBTN p,
+  .HomeBarBox > p {
+    font-size: 0.84rem;
+  }
+}
+
+
+
+/* Home intro */
+.HomePageIntro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 18px;
+  padding: 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.HomePageLogo {
+  width: 5.7em;
+  height: 6.144em;
+  border-radius: 1.4em;
+}
+.HomePageTitle {
+  margin: 0;
+  font-family: RobotoConBold, sans-serif;
+  font-size: 2.4rem;
+  color: #3d2a10;
+  letter-spacing: 0.03em;
+}
+.HomePageSub {
+  margin: 0;
+  font-family: RobotoConBold, sans-serif;
+  font-size: 1.1rem;
+  color: #7a5c34;
+  letter-spacing: 0.01em;
+}
+.HomePageDesc {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #9e7e56;
+  max-width: 36em;
+  line-height: 1.6;
+}
+
+/* Catalog iframe */
+.page {
+  width: 100%;
+  height: 100%;
+}
+.CatalogFrame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Main Canvas */
+.MainCanvas1 {
+  width: 99em;
+  height: 52.8em;
+  background-color: #fffcf6;
+  margin: 7px;
+  border-radius:12px;
+  position: relative;
+  overflow: hidden;
+}
+.MainCanvasBG {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  pointer-events: none;
+  filter: blur(.5px);
+}
+.MainCanvasBG.active {
+  opacity: 0.9;
+}
+
+/* Game Select */
+.GameSelectBox {
+  width: 92em;
+  height: 45em;
+  position: relative;
+  margin: 3em 0em 0em 1em;
+  overflow-y: auto;
+  perspective: 800px;
+  scrollbar-width: none;           /* Firefox */
+  -ms-overflow-style: none;        /* IE/Edge */
+}
+.GameSelectBox::-webkit-scrollbar {
+  display: none;                   /* Chrome/Safari */
+}
+
+.GameSelectBTN {
+  display: block;
+  cursor: pointer;
+  margin: 25px 20px;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  transform-origin: center center;
+  padding: 6px;
+  border: none;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #e0dc90 0%, #bad137 40%, #8fa828 100%);
+  box-shadow:
+    0 4px 0 #6b7d1e,
+    0 6px 8px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.GameSelectBTN.selected {
+  background: linear-gradient(180deg, #fff5a0 0%, #f5e642 40%, #d4b820 100%);
+  box-shadow:
+    0 4px 0 #a08c10,
+    0 6px 10px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 0 20px rgba(245, 230, 66, 0.4);
+}
+
+.GameSelectIcon{
+  display: block;
+  width: 15em;
+  height: 15em;
+  border-radius: 16px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+@keyframes enlarge-shake {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1.1) rotateZ(5deg); }
+}
+@font-face {
+  font-family: RobotoConBold;
+  src: url(data/font/RobotoCondensed-Bold.ttf);
+}
+
+/* ── Tablet ── */
+@media (max-width: 900px) {
+  html {
+    font-size: clamp(10px, 1.8vw, 14px);
+  }
+
+  body {
+    align-items: stretch;
+    justify-content: stretch;
+  }
+
+  .OutlineBox {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    flex-direction: column;
+  }
+
+  /* Sidebar becomes a top bar */
+  .HomeBar {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: 0 1px 0 rgba(139, 115, 85, 0.25);
+  }
+
+  .HomeBarBox {
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .HomeBarBox::-webkit-scrollbar { display: none; }
+
+  .HomeBarButtons {
+    min-height: unset;
+    flex-direction: row;
+    width: auto;
+    flex-shrink: 0;
+    padding: 6px 10px;
+  }
+
+  .HomeBarIcon {
+    width: 2.4em;
+    height: 2.4em;
+  }
+
+  .HomeBarBrand p {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  .HomeBarBTN {
+    min-height: unset;
+    width: auto;
+    flex-shrink: 0;
+    padding: 6px 12px;
+    justify-content: center;
+  }
+
+  .HomeBarBTN p {
+    display: none;
+  }
+
+  .HomeBarBTN:last-child {
+    margin-top: 0;
+    margin-left: auto;
+  }
+
+  .MainCanvas1 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+    flex: 1;
+    min-height: 0;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 520px) {
+  html {
+    font-size: 12px;
+  }
+
+  .HomeBarBrand p {
+    display: none;
+  }
+
+  .HomePageIntro {
+    padding: 24px 18px;
+    gap: 12px;
+  }
+
+  .HomePageLogo {
+    width: 6em;
+    height: 6em;
+  }
+
+  .HomePageTitle {
+    font-size: 1.8rem;
+  }
+
+  .HomePageSub {
+    font-size: 0.95rem;
+  }
+
+  .HomePageDesc {
+    font-size: 0.88rem;
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>KoG Archive</title>
+        <link rel="shortcut icon" type="image/png" href="data/Images/favicon.png">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <div class="OutlineBox">
+
+            <div class="HomeBar">
+                <div class="HomeBarBox">
+                    <button class="HomeBarButtons HomeBarBrand" data-page="WS-Home">
+                        <img class="HomeBarIcon" src="data/Images/logo.webp" alt="World Seed Logo">
+                        <p>Knights of Glory Archive</p>
+                    </button>
+                    <button class="HomeBarBTN" data-page="WS-Wiki">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-bookmark-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8z"/>
+                        <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                        <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                        </svg>
+                        <p>Wiki</p>
+                    </button>
+                    <button class="HomeBarBTN" data-page="WS-Analysis">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brush" viewBox="0 0 16 16">
+                        <path d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.1 6.1 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.1 8.1 0 0 1-3.078.132 4 4 0 0 1-.562-.135 1.4 1.4 0 0 1-.466-.247.7.7 0 0 1-.204-.288.62.62 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896q.19.012.348.048c.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04M4.705 11.912a1.2 1.2 0 0 0-.419-.1c-.246-.013-.573.05-.879.479-.197.275-.355.532-.5.777l-.105.177c-.106.181-.213.362-.32.528a3.4 3.4 0 0 1-.76.861c.69.112 1.736.111 2.657-.12.559-.139.843-.569.993-1.06a3 3 0 0 0 .126-.75zm1.44.026c.12-.04.277-.1.458-.183a5.1 5.1 0 0 0 1.535-1.1c1.9-1.996 4.412-5.57 6.052-8.631-2.59 1.927-5.566 4.66-7.302 6.792-.442.543-.795 1.243-1.042 1.826-.121.288-.214.54-.275.72v.001l.575.575zm-4.973 3.04.007-.005zm3.582-3.043.002.001h-.002z"/>
+                        </svg>
+                        <p>Artbook</p>
+                    </button>
+                    <button class="HomeBarBTN" data-page="WS-Contributions">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                        </svg>
+                        <p>About</p>
+                    </button>
+                </div>
+            </div>
+
+            <div class="MainCanvas1">
+
+                <div class="page" id="page-WS-Home">
+                    <div class="HomePageIntro">
+                        <img class="HomePageLogo" src="data/Images/logo.webp" alt="World Seed Logo">
+                        <h1 class="HomePageTitle">Knights of Glory Archive</h1>
+                        <p class="HomePageSub">An archival website dedicated to perserving imagery and other data from Knights of Glory</p>
+                        <p class="HomePageDesc">Use the side/top bar to navigate to the site</p>
+                    </div>
+                </div>
+
+                <div class="page" id="page-WS-Wiki" style="display:none;">
+                    <iframe class="CatalogFrame" src="./Wiki/wswiki.html" title="Wiki"></iframe>
+                </div>
+
+                <div class="page" id="page-WS-Analysis" style="display:none;">
+                    <iframe class="CatalogFrame" src="./Artbook/artbook.html" title="Artbook"></iframe>
+                </div>
+
+                <div class="page" id="page-WS-Contributions" style="display:none;">
+                    <iframe class="CatalogFrame" src="./Contributions/wscontributions.html" title="About"></iframe>
+                </div>
+        </div>
+    </body>
+</html>

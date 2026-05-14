@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Galex",
+    "initial": "G",
+    "avatar": "https://pbs.twimg.com/profile_images/1926245373577744384/eY4N-N3Y_400x400.jpg",
+    "role": "Project Lead · Image Archival · Research",
+    "badge": "lead",
+    "socials": [
+        { "platform": "Twitter", "url": "https://x.com/LostGalex" }
+    ]
+  },
+  {
+    "name": "N/A",
+    "initial": "?",
+    "avatar": "",
+    "role": "Open to contributors — see below",
+    "badge": "community",
+    "socials": []
+  }
+]

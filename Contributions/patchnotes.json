@@ -1,0 +1,18 @@
+[
+    {
+    "version": "v0.1.0",
+    "date": "May 13, 2026",
+    "category": "artbook",
+    "notes": [
+      "Artbook Section added with basic and complete functionality."
+    ]
+  },
+  {
+    "version": "v0.0.0",
+    "date": "May 11, 2026",
+    "category": "wiki",
+    "notes": [
+      "Wiki page placeholder added to World Seed UI."
+    ]
+  }
+]
