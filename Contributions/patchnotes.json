@@ -1,5 +1,13 @@
 [
     {
+    "version": "v0.2.0",
+    "date": "May 16, 2026",
+    "category": "social-media",
+    "notes": [
+      "Twitter Archive Section added and Updated Imagery for the Artbook Section."
+    ]
+  },
+    {
     "version": "v0.1.0",
     "date": "May 13, 2026",
     "category": "artbook",

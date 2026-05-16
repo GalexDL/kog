@@ -298,6 +298,7 @@
     .tag-analyze { background: rgba(100, 160, 220, 0.18); border: 1px solid rgba(80,130,200,0.3); color: #2a5080; }
     .tag-wiki   { background: rgba(180, 130, 220, 0.18); border: 1px solid rgba(150,100,200,0.3); color: #5a2a80; }
     .tag-artbook { background:rgba(130, 195, 220, 0.18); border: 1px solid rgba(145, 119, 87, 0.28); color: #7a5c34; }
+    .tag-social-media { background: rgba(90, 167, 106, 0.12); border: 1px solid rgba(87, 119, 145, 0.28); color: #347a3d; }
 
     /* Placeholder notice */
     .placeholder-notice {
