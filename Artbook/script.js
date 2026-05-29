@@ -300,7 +300,35 @@ viewerFrame.addEventListener('pointercancel', () => {
   state.dragging = false;
 });
 
-// Initialize viewer state
+// Table of Contents Controls
+async function loadTOC() {
+    const response = await fetch('toc.json');
+    const data = await response.json();
+    const container = document.getElementById('toc-list');
+
+    container.innerHTML = `<ul class="toc-main-list">${data.map(item => {
+        const mainPage = item.MainPage || item.Page;
+        const subPages = item.SubPage ? item.SubPage.split(/,\s*/) : [];
+        const hasSubItems = item.SubHead && item.SubHead.trim() !== "";
+        const subItemsHtml = hasSubItems ? item.SubHead.split(/,\s*/).map((head, i) => `
+            <li class="toc-sub-item toc-row" data-page="${subPages[i]}">${head}</li>
+        `).join('') : '';
+
+        return `
+            <li class="toc-main-item">
+                <div class="toc-main-title toc-row" data-page="${mainPage}">${item.MainHead}</div>
+                ${hasSubItems ? `<ul class="toc-sub-list">${subItemsHtml}</ul>` : ''}
+            </li>
+        `;
+    }).join('')}</ul>`;
+
+    container.addEventListener('click', (e) => {
+        const row = e.target.closest('.toc-row');
+        if (row) setPage(parseInt(row.dataset.page));
+    });
+}
+document.addEventListener('DOMContentLoaded', loadTOC);
+
 updateZoomLabel();
 updatePageLabel();
 applyTransform();

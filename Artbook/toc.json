@@ -1,0 +1,26 @@
+[
+    {
+        "MainHead": "Job",
+        "MainPage": "3",
+        "SubHead": "",
+        "SubPage": ""
+    },
+    {
+        "MainHead": "Dragon & Monster",
+        "MainPage": "29",
+        "SubHead": "無属性ドラゴン, 光属性ドラゴン, 闇属性ドラゴン, 火属性ドラゴン, 水属性ドラゴン, 雷属性ドラゴン, 極大魔獣, モンスター, ボスモンスター, 魔将",
+        "SubPage": "30, 36, 47, 56, 65, 74, 84, 86, 88, 90"
+    },
+    {
+        "MainHead": "Weapon & Armor",
+        "MainPage": "91",
+        "SubHead": "剣, 短剣, 杖, 弓, 槍, 斧, 刀, 防具, アイテム",
+        "SubPage": "92, 97, 100, 104, 108, 112, 116, 120, 134"
+    },
+    {
+        "MainHead": "Story",
+        "Page": "135",
+        "SubHead": "キャラクター, ワ ー ル ド, ス ト ー リ ー",
+        "SubPage": "136, 140, 146"
+    }
+]

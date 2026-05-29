@@ -22,6 +22,18 @@
     "description": "Archive Data of the Knights of Glory Twitter account, sourced from Grey",
     "type": "asset",
     "url": "https://drive.google.com/file/d/1geeolDpnlSGpwz41RXdqjU3HEVp2pyk7/view?usp=sharing"
+  },
+  {
+    "name": "Knights of Glory Music",
+    "description": "Archive Data of the Knights of Glory Music",
+    "type": "asset",
+    "url": "https://www.youtube.com/watch?v=XJGXOzXIpeo&list=PLr4OG3UI-V0n90xViKl2XpVeGlNVAE48K"
+  },
+  {
+    "name": "Knights of Glory Website Archive",
+    "description": "Archive Data of the Knights of Glory Website",
+    "type": "asset",
+    "url": "https://web.archive.org/web/*/http://kofg.jp/*"
   }
 
 ]

@@ -12,7 +12,7 @@
 
     <body>
         <div class="OutlineBox">
-
+            <!-- Sidebar -->
             <div class="HomeBar">
                 <div class="HomeBarBox">
                     <button class="HomeBarButtons HomeBarBrand" data-page="WS-Home">
@@ -39,6 +39,21 @@
                         </svg>
                         <p>Twitter</p>
                     </button>
+                    <button class="HomeBarBTN" data-page="WS-Music">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-list" viewBox="0 0 16 16">
+                            <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2"/>
+                            <path fill-rule="evenodd" d="M12 3v10h-1V3z"/>
+                            <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1z"/>
+                            <path fill-rule="evenodd" d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5m0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5m0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5"/>
+                            </svg>
+                        <p>Music</p>
+                    </button>
+                    <button class="HomeBarBTN" data-page="WS-SiteArchive">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
+                        <path d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+                        </svg>
+                        <p>OG Site Archive</p>
+                    </button>
                     <button class="HomeBarBTN" data-page="WS-Contributions">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
                         <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
@@ -49,7 +64,12 @@
             </div>
 
             <div class="MainCanvas1">
-
+                <button class="CanvasFullscreenBTN" aria-label="Enter Fullscreen">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707m0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707m-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707"/>
+                    </svg>
+                </button>
+                <!-- Home Page-->
                 <div class="page" id="page-WS-Home">
                     <div class="HomePageIntro">
                         <img class="HomePageLogo" src="data/Images/logo.webp" alt="World Seed Logo">
@@ -59,19 +79,29 @@
                     </div>
                 </div>
 
+                <!-- Additional Pages-->
                 <div class="page" id="page-WS-Wiki" style="display:none;">
-                    <iframe class="CatalogFrame" src="./Wiki/wswiki.html" title="Wiki"></iframe>
+                    <iframe class="CatalogFrame" data-src="./Wiki/" title="Wiki" loading="lazy"></iframe>
                 </div>
-
                 <div class="page" id="page-WS-Artbook" style="display:none;">
-                    <iframe class="CatalogFrame" src="./Artbook/artbook.html" title="Artbook"></iframe>
+                    <iframe class="CatalogFrame" data-src="./Artbook/" title="Artbook" loading="lazy"></iframe>
                 </div>
                 <div class="page" id="page-WS-SocialMedia" style="display:none;">
-                    <iframe class="CatalogFrame" src="./SocialMedia/twitter.html" title="Twitter"></iframe>
+                    <iframe class="CatalogFrame" data-src="./SocialMedia/" title="Twitter" loading="lazy"></iframe>
+                </div>
+                <div class="page" id="page-WS-Music" style="display:none;">
+                    <iframe class="CatalogFrame" data-src="./Music/" title="Music" loading="lazy"></iframe>
                 </div>
                 <div class="page" id="page-WS-Contributions" style="display:none;">
-                    <iframe class="CatalogFrame" src="./Contributions/wscontributions.html" title="About"></iframe>
+                    <iframe class="CatalogFrame" data-src="./Contributions/" title="About" loading="lazy"></iframe>
                 </div>
+                <div class="page" id="page-WS-SiteArchive" style="display:none;">
+                    <div class="flash-container">
+                        <iframe class="ArchiveFrame" data-src="./SiteArchive/" title="OG Site Archive" scrolling="no" loading="lazy"></iframe>
+                    </div> 
+                </div> 
+                
+
         </div>
     </body>
 </html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ナイツオブグローリーオフィシャルサイト</title>
+    <meta name="description" content="ナイツオブグローリーオフィシャルサイトです。登場するキャラクターやゲームシステムなどを紹介しています。多彩な“ジョブ”と大迫力の“ドラゴン”リアルタイムバトルゲームが完成系がここに！"/>
+    <meta name="keywords" content="ナイツオブグローリー, KNIGHTS OF GLORY, RPG, ファンタジー, ファンタジーゲーム, ドラゴン, ジョブ, リアルタイムバトル,リアルタイムバトルゲーム, バトルゲーム, バトル, 騎士団, ゲーム, モバゲー, mobage, ソーシャル, サイゲームス, Cygames"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <style type="text/css" media="screen"> 
+        html, body { 
+            height: 100%; 
+            margin: 0; 
+            padding: 0; 
+            overflow: hidden;
+            background-color: #ffffff; 
+            text-align: center;
+        }   
+        object:focus { 
+            outline: none; 
+        }
+        #flashContent { 
+            display: none;
+            width: 100%;
+            height: 100%; 
+        }
+    </style>
+
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) 
+                    || (window.innerWidth <= 768);
+
+        window.RufflePlayer.config = {
+            "autoplay": "on",
+            "unmuteOverlay": "hidden",
+            "splashScreen": true,
+            "letterbox": "on",
+            "scale": "showAll",
+            "forceScale": isMobile,
+            "showSwfDownload": true
+        };
+
+    </script>
+
+    <script type="text/javascript" src="swfobject.js"></script>
+    <script type="text/javascript">
+        var swfVersionStr = "10.2.0";
+        var xiSwfUrlStr = "";
+        var flashvars = {};
+        var params = {};
+        params.quality = "low";
+        params.bgcolor = "#ffffff";
+        params.allowscriptaccess = "always";
+        params.allowfullscreen = "true";
+        params.wmode = "opaque";
+        var attributes = {};
+        attributes.id = "cy_tact_tizer";
+        attributes.name = "cy_tact_tizer";
+        attributes.align = "middle";
+        
+        swfobject.embedSWF(
+            "loading.swf", "flashContent", 
+            "100%", "100%", 
+            swfVersionStr, xiSwfUrlStr, 
+            flashvars, params, attributes);
+            
+        swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+    </script>
+</head>
+<body>
+
+    <div id="flashContent">
+    </div>
+        
+</body>
+</html>

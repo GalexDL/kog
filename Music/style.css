@@ -1,0 +1,410 @@
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+@font-face {
+  font-family: RobotoConBold;
+  src: url(font/RobotoCondensed-Bold.ttf);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.OutlineBox {
+  width: 100vw;
+  height: 100vh;
+  background-color: #808080;
+  display: flex;
+  padding: 8px;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.HomeBar {
+  width: 90px;
+  height: 100%;
+  background-color: #fffcf6;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.HomeBarBTN {
+  display: block;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin: 20px auto;
+}
+
+.MainCanvas1 {
+  flex: 1;
+  height: 100%;
+  background-color: #fffcf6;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.MusicQuizBG {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  opacity: 0;
+  transition: background-image 0.3s ease, opacity 0.6s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Core MP3 Player App Layout ─── */
+#page-musicquiz {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+#MusicPanelSlider {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+}
+
+.MP3PMode {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.MP3PLayout {
+  display: flex;
+  gap: 2rem;
+  height: 100%;
+  width: 100%;
+}
+
+.MP3PPlayer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  width: 24rem;
+  flex-shrink: 0;
+}
+
+.MP3PArt {
+  width: 22rem;
+  height: 22rem;
+  max-width: 100%;
+  max-height: 50vh;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.32);
+}
+
+.MP3PMeta {
+  width: 100%;
+  text-align: center;
+}
+
+.MP3PTrackTitle {
+  font-family: RobotoConBold, sans-serif;
+  font-size: 1.35rem;
+  color: #1a1a1a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.MP3PAlbumName {
+  font-family: RobotoConBold, sans-serif;
+  font-size: 1rem;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Scrubber Timeline track */
+.MP3PProgressRow {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.MP3PTime {
+  font-family: RobotoConBold, sans-serif;
+  font-size: 0.85rem;
+  color: #666;
+  min-width: 3rem;
+  text-align: center;
+}
+
+.MP3PBarWrap {
+  flex: 1;
+  height: 0.6rem;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.MP3PBarWrap:hover .MP3PBarFill { background: #8fa828; }
+.MP3PBarWrap:hover .MP3PBarThumb { opacity: 1; }
+
+.MP3PBarFill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #8fa, #bad137);
+  border-radius: 1rem;
+  pointer-events: none;
+}
+
+.MP3PBarThumb {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #8fa828;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+}
+
+.MP3PCtrlRow {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.MP3PCtrlBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  border-radius: 50%;
+  transition: color 0.15s, background 0.15s;
+}
+
+.MP3PCtrlBtn:hover { color: #8fa828; }
+
+.MP3PPlayPauseBtn {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: linear-gradient(180deg, #e0dc90 0%, #bad137 40%, #8fa828 100%);
+  box-shadow: 0 4px 0 #6b7d1e;
+  color: #fff;
+  border-radius: 50%;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.MP3PPlayPauseBtn:hover { background: linear-gradient(180deg, #eae8a0 0%, #c8df45 40%, #9db830 100%); }
+.MP3PPlayPauseBtn:active { transform: translateY(3px); box-shadow: 0 1px 0 #6b7d1e; }
+
+.MP3PSidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  overflow: hidden;
+}
+
+.MP3PAlbumRail {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.6rem;
+  scrollbar-width: thin;
+  flex-shrink: 0;
+}
+
+.MP3PAlbumRail::-webkit-scrollbar { height: 5px; }
+.MP3PAlbumRail::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+
+.MP3PAlbumTile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  width: 7rem;
+}
+
+.MP3PAlbumTile img {
+  width: 7rem;
+  height: 7rem;
+  object-fit: cover;
+  border-radius: 0.6rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border: 2px solid transparent;
+  transition: border-color 0.2s, transform 0.15s;
+}
+
+.MP3PAlbumTile:hover img { transform: scale(1.04); }
+.MP3PAlbumTile.active img { border-color: #8fa828; }
+
+.MP3PAlbumTileLabel {
+  font-family: RobotoConBold, sans-serif;
+  font-size: 0.75rem;
+  color: #555;
+  text-align: center;
+  line-height: 1.2;
+  max-width: 7rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.MP3PAlbumTile.active .MP3PAlbumTileLabel { color: #8fa828; }
+
+.MP3PTrackList {
+  flex: 1;
+  overflow-y: auto;
+  border-radius: 0.8rem;
+  background: rgba(255, 252, 246, 0.45);
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 0.4rem 0;
+  scrollbar-width: thin;
+}
+
+.MP3PTrackList::-webkit-scrollbar { width: 5px; }
+.MP3PTrackList::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+
+.MP3PTrackItem {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: background 0.12s;
+}
+
+.MP3PTrackItem:hover { background: rgba(186,209,55,0.15); }
+.MP3PTrackItem.active { background: rgba(186,209,55,0.25); }
+
+.MP3PTrackNum {
+  font-family: RobotoConBold, sans-serif;
+  font-size: 0.85rem;
+  color: #999;
+  min-width: 1.8em;
+  text-align: right;
+}
+
+.MP3PTrackItem.active .MP3PTrackNum { color: #8fa828; }
+
+.MP3PTrackName {
+  font-family: RobotoConBold, sans-serif;
+  font-size: 1rem;
+  color: #333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.MP3PTrackItem.active .MP3PTrackName { color: #6b7d1e; }
+
+/* ─── 3D Tilt Hover Effect ─── */
+.tilt-effect {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.tilt-effect:not(:hover) {
+  transition: transform 0.5s ease-out;
+}
+
+@media (max-width: 768px) {
+  .OutlineBox {
+    flex-direction: column-reverse;
+    padding: 4px;
+    gap: 4px;
+  }
+
+  .HomeBar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .HomeBarBTN {
+    margin: 0;
+  }
+
+  .MP3PMode {
+    padding: 0.8rem;
+  }
+
+  .MP3PLayout {
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto;
+  }
+
+  .MP3PPlayer {
+    width: 100%;
+    flex-shrink: 0;
+    gap: 0.6rem;
+  }
+
+  .MP3PArt {
+    width: 14rem;
+    height: 14rem;
+  }
+
+  .MP3PSidebar {
+    width: 100%;
+    overflow: visible;
+  }
+  .MP3PAlbumRail {
+    display: none;
+  }
+
+  .MP3PTrackList {
+    max-height: 250px;
+  }
+}

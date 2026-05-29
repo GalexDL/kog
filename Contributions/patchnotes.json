@@ -1,5 +1,13 @@
 [
-    {
+  {
+    "version": "v0.3.0",
+    "date": "May 29, 2026",
+    "category": "wiki",
+    "notes": [
+      "Added a Music Archive Section and the Orginal Website Archive Section to the Wiki.","Added Table of Contents Section to the Artbook Settings (needs some work in the future)"," Updated Imagery for the Artbook Section. ","Added Search/Media Functionailty to the Twitter Archive Section.","Testing the addtion of a fullscreen mode for mobile (double tap)", "...and more!"
+    ]
+  },
+  {
     "version": "v0.2.0",
     "date": "May 16, 2026",
     "category": "social-media",
@@ -7,7 +15,7 @@
       "Twitter Archive Section added and Updated Imagery for the Artbook Section."
     ]
   },
-    {
+  {
     "version": "v0.1.0",
     "date": "May 13, 2026",
     "category": "artbook",

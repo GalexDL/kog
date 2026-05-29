@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="music.js"></script>
+</head>
+<body>
+        <div class="MainCanvas1">
+            <div id="MusicQuizBG" class="MusicQuizBG"></div>
+
+            <div class="page" id="page-musicquiz" style="display:block;">
+                <div class="MP3PMode" id="MP3PMode">
+                    
+                    <audio id="MusicQuizAudio"></audio>
+
+                    <div class="MP3PLayout">
+                        <div class="MP3PPlayer">
+                            <img id="MP3PArt" class="MP3PArt HomePageLogo tilt-effect" src="" alt="Album Art">
+                            <div class="MP3PMeta">
+                                <div id="MP3PTrackTitle" class="MP3PTrackTitle">—</div>
+                                <div id="MP3PAlbumName" class="MP3PAlbumName">—</div>
+                            </div>
+                            
+                            <div class="MP3PProgressRow">
+                                <span id="MP3PCurrentTime" class="MP3PTime">0:00</span>
+                                <div class="MP3PBarWrap" id="MP3PBarWrap">
+                                    <div class="MP3PBarFill" id="MP3PBarFill"></div>
+                                    <div class="MP3PBarThumb" id="MP3PBarThumb"></div>
+                                </div>
+                                <span id="MP3PDuration" class="MP3PTime">0:00</span>
+                            </div>
+                            
+                            <div class="MP3PCtrlRow">
+                                <button id="MP3PPrevBtn" class="MP3PCtrlBtn" title="Previous Track">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="currentColor"><path d="M220-240v-480h80v480h-80Zm520 0L380-480l360-240v480Z"/></svg>
+                                </button>
+                                <button id="MP3PPlayPauseBtn" class="MP3PCtrlBtn MP3PPlayPauseBtn" title="Play / Pause">
+                                    <svg id="MP3PPlayIcon" xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="currentColor"><path d="M320-200v-560l440 280-440 280Z"/></svg>
+                                    <svg id="MP3PPauseIcon" xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="currentColor" style="display:none;"><path d="M520-200v-560h240v560H520Zm-320 0v-560h240v560H200Z"/></svg>
+                                </button>
+                                <button id="MP3PNextBtn" class="MP3PCtrlBtn" title="Next Track">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="currentColor"><path d="M660-240v-480h80v480h-80Zm-440 0v-480l360 240-360 240Z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="MP3PSidebar">
+                            <div class="MP3PAlbumRail" id="MP3PAlbumRail"></div>
+                            <div class="MP3PTrackList" id="MP3PTrackList"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

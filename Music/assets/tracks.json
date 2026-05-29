@@ -1,0 +1,23 @@
+[
+  {
+    "album": "Knights of Glory OST",
+    "cover": "./cover.webp",
+    "background": "./bg.webp",
+    "tracks": [
+      { "title": "BGM 001",                                    "file": "./bgm_001.opus" },
+      { "title": "Main Theme - BGM 002",                                    "file": "./KOG_Theme_bgm_002.opus" },
+      { "title": "BGM 003",                                       "file": "./bgm_003.opus" },
+      { "title": "BGM 004",                                 "file": "./bgm_004.opus" },
+      { "title": "BGM 005",                                             "file": "./bgm_005.opus" },
+      { "title": "Battle -BGM 006",                                             "file": "./KOG_Battle_bgm_006.opus" },
+      { "title": "BGM 007",                                                   "file": "./bgm_007.opus" },
+      { "title": "BGM 008",                                         "file": "./bgm_008.opus" },
+      { "title": "BGM 009",    "file": "./bgm_009.opus" },
+      { "title": "BGM 010",                "file": "./bgm_010.opus" },
+      { "title": "BGM 011",                                                 "file": "./bgm_011.opus" },
+      { "title": "BGM 012",                                                "file": "./bgm_012.opus" },
+      { "title": "Painful -BGM 013",                            "file": "./KOG_Painful_bgm_013.opus" }
+    ]
+  }
+]
+
