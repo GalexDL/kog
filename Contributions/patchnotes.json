@@ -1,5 +1,13 @@
 [
   {
+    "version": "v0.3.1",
+    "date": "May 29, 2026",
+    "category": "wiki",
+    "notes": [
+      "Fullscreen mode for mobile was a bad idea, so it was removed. The button now just opens the iframe/page in a new tab instead."
+    ]
+  },
+  {
     "version": "v0.3.0",
     "date": "May 29, 2026",
     "category": "wiki",

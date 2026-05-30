@@ -54,37 +54,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // --- Fullscreen Button Logic () ---
   const fullscreenBtn = document.querySelector('.CanvasFullscreenBTN');
-  if (fullscreenBtn && outlineBox) {
-    fullscreenBtn.addEventListener('click', (e) => {
-      e.stopPropagation(); 
-      outlineBox.classList.add('navbar-hidden');
-    });
-  }
-
-  // --- Double-Tap To Exit Fullscreen ---
-  let tapCount = 0;
-  let lastTapTime = 0;
-
-  if (outlineBox) {
-    outlineBox.addEventListener('click', (e) => {
-      if (window.innerWidth > 900) return;
-      if (!outlineBox.classList.contains('navbar-hidden')) return;
-
-      const currentTime = new Date().getTime();
-      const tapTimeout = 350;
-
-      if (currentTime - lastTapTime > tapTimeout) {
-        tapCount = 1;
+  if (fullscreenBtn) {
+    fullscreenBtn.addEventListener('click', () => {
+      const activePage = pages.find(p => p.style.display !== 'none');
+      if (!activePage) return;
+      const activeIframe = activePage.querySelector('iframe');
+      
+      if (activeIframe) {
+        const currentLink = activeIframe.getAttribute('src') || activeIframe.getAttribute('data-src');
+        
+        if (currentLink) {
+          window.location.href = currentLink;
+        }
       } else {
-        tapCount++;
-      }
-
-      lastTapTime = currentTime;
-
-      if (tapCount === 2) {
-        outlineBox.classList.remove('navbar-hidden');
-        tapCount = 0; 
+        console.log("No iframe");
       }
     });
   }
